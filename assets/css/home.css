@@ -740,4 +740,8 @@ main .recent-orders a{
     main .recent-orders table {
         width: 82vw;
     }
+
+    #btnNew {
+        margin-top: 15px;
+    }
 }

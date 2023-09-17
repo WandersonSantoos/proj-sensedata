@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Gastos Pessoais</title>
+
+    <!-- Icones -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../assets/css/home.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="../assets/img/sd-logo.svg" alt="">
+                    <h2 class="text-muted">Estágio dev Web</h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        rectangle
+                    </span>
+                    <h3>Table</h3>
+                </a>
+
+                <a href="#" class="active">
+                    <span class="material-symbols-outlined">cards</span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="#" >
+                    <span class="material-symbols-outlined">person_2</span>
+                    <h3>Pessoa</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">mail</span>
+                    <h3>Mensagens</h3>
+                    <span class="message-count">15</span>
+                </a>
+                <a href="login.html">
+                    <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                    <h3>Sair</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+
+            <div class="right">
+                <div class="top">
+                    <button id="menu-btn">
+                        <span class="material-icons-sharp">menu</span>
+                    </button>
+                    <div class="theme-toggler">
+                        <span class="material-symbols-outlined">
+                            dark_mode
+                        </span>
+
+                        <span class="material-symbols-outlined active">
+                            light_mode
+                            </span>
+                    </div>
+                    <div class="profile">
+                        <div class="info">
+                            <p>Olá, <b>Wanderson</b></p>
+                            <small class="text-muted">Admin</small>
+                        </div>
+                        <div class="profile-photo">
+                            <img src="../assets/img/newPerson.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1>Dashboard</h1>
+            <div class="date">
+                <input type="date" name="" id="">
+            </div>
+
+            <div class="insights">
+                <!-- Valor 1 -->
+                <div class="sales">
+                    <span class="material-symbols-outlined">
+                        stacked_line_chart
+                        </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Salário</h3>
+                            <h1>R$ 1.320,00</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>50%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Ultimas modificações</small>
+                </div>
+
+                <!-- Valor 2 -->
+                <div class="expenses">
+                    <span class="material-symbols-outlined">
+                        finance
+                        </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Despezas Totais</h3>
+                            <h1>R$ 800,00</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>40%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Ultimas modificações</small>
+                </div>
+
+                <!-- Valor 3 -->
+                <div class="income">
+                    <span class="material-symbols-outlined">
+                        grouped_bar_chart
+                        </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Rendimentos</h3>
+                            <h1>R$ 2.500,00</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Ultimas modificações</small>
+                </div>
+            </div>
+
+            <div class="recent-orders">
+                <h2>Mudanças recentes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome do produto</th>
+                            <th>Número do produto</th>
+                            <th>Pagamento</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Celular</td>
+                            <td>Carro</td>
+                            <td>Casa</td>
+                            <td class="warning">Aluguel</td>
+                            <td class="primary">Reforma</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="error.html">Mostrar mais</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/scripts/home.js"></script>
+</body>
+</html>

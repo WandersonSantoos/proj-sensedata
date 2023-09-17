@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         for (let i = 0; i < usuarios.length; i++) {
             if (usuarioInput.value === usuarios[i].login && senhaInput.value === usuarios[i].pass) {
-                alert('Login bem sucedido!');
                 localStorage.setItem('usuarioLogado', 'true'); // Armazena um valor no localStorage
                 validarLogin = true;
                 window.location.href = 'pages/home.html'; // Redireciona para a página home.html após o login bem-sucedido
@@ -51,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        alert('Usuário ou senha incorretos');
+        alert('Usuário ou senha incorretos!');
         senhaInput.value = '';
         usuarioInput.value = '';
     }

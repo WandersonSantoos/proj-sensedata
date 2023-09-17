@@ -26,38 +26,6 @@
     display: flex;
  }
 
- /* .right .theme-toggler {
-   background-color: var(--color-light);
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   height: 1.6rem;
-   width: 4.2rem;
-   cursor: pointer;
-   border-radius: var(--border-radius-1);
-}
-
-   .right .theme-toggler span {
-   font-size: 1.2rem;
-   width: 50%;
-   height: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-
-   .right .theme-toggler span.active {
-   background-color: var(--color-primary);
-   color: white;
-   border-radius: var(--border-radius-1);
-}
-
-   .right .top .theme-toggler {
-   width: 4.4rem;
-   position: absolute;
-   left: 66%;
-} */
-
  .login {
     display: flex;
     flex-direction: column;
@@ -65,7 +33,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: 700px;
-    min-height: 100vh;
+    min-height: 92vh;
     padding: clamp(35px, 8%, 50px);
   }
 
@@ -238,13 +206,23 @@
  }
 
  .wallpaper {
-    align-items: center;
-    justify-content: center;
-    display: flex;
+   margin: auto;
+   display: block;
+ }
+
+ .titulo {
+   text-align: center;
+   color: #1B77F3;
+   padding: 20px;
+ }
+
+ .paragrafo {
+   text-align: center;
+   padding-bottom: 20px;
  }
 
  .wallpaper img {
-    width: 500px;
+    width: 300px;
  }
 
  /* Telas largas */

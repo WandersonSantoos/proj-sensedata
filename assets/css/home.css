@@ -55,7 +55,7 @@ body {
     width: 100vw;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.88rem;
+    font-size: 1rem;
     background-color: var(--color-background);
     user-select: none;
     overflow-x: hidden;
@@ -162,8 +162,6 @@ aside .logo img {
 aside .close {
     display: none;
 }
-
-
 /* Sidebar */
 
 aside .sidebar {
@@ -237,20 +235,7 @@ aside .sidebar .message-count{
 /* Main */
 
 main {
-    margin-top: 1.4rem;
-}
-
-main .date {
-    display: inline-block;
-    background-color: var(--color-light);
-    border-radius: var(--border-radius-1);
-    margin-top: 1rem;
-    padding: 0.5rem 1.6rem;
-}
-
-main .date input[type="date"] {
-    background-color: transparent;
-    color: var(--color-dark);
+    margin-top: 0.5rem;
 }
 
 main .insights {
@@ -272,31 +257,34 @@ main .insights > div:hover {
     box-shadow: none;
 }
 
-main .insights > div span {
-    background-color: var(--color-primary);
+main .insights > div .material-symbols-outlined {
+    background-color: var(--color-sucess);
     padding: 0.5rem;
     border-radius: 50%;
     color: var(--color-white);
     font-size: 2rem;
 }
 
-main .insights > div.expenses span {
+main .insights > div.expens .material-symbols-outlined {
     background-color: var(--color-danger);
 }
 
-main .insights > div.income span {
-    background-color: var(--color-sucess);
+main .insights > div.income .material-symbols-outlined {
+    background-color: var(--color-primary);
+}
+
+.incomes, .expenses, .total {
+    font-size: 1.5rem;
+    padding-left: 15px;
 }
 
 main .insights > div .middle {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 main .insights h3 {
-    margin: 1rem 0 0 0.6rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 main .insights .progress {
@@ -311,7 +299,7 @@ main .insights svg {
     height: 7rem;
 }
 
-main .insights svg circle {
+/* main .insights svg circle {
     fill: none;
     stroke: var(--color-primary);
     stroke-width: 14;
@@ -334,7 +322,7 @@ main .insights .expenses svg circle {
 main .insights .income svg circle {
     stroke-dasharray: 110;
     stroke-dashoffset: 20;
-}
+} */
 
 main .insights .progress .number {
     position: absolute;
@@ -345,6 +333,11 @@ main .insights .progress .number {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.left {
+    padding: 10px;
+    display: flex;
 }
 
 main .insights small {
@@ -376,7 +369,7 @@ main .recent-orders table:hover{
     box-shadow: none;
 }
 
-main tablet tbody tr:last-child td{
+main table tbody tr:last-child td{
     border: none;
 }
 
@@ -434,8 +427,133 @@ main .recent-orders a{
     text-align: right;
 }
 
+/* dinamico */
+  .resume {
+    display: flex;
+    padding: 10px 0;
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .resume > div {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+  }
+  
+  .newItem {
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: end;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .divDesc, .divType, .divAmount {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+
+  label {
+    padding-left: 15px;
+  }
+
+  input {
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-white);
+    color: var(--color-dark);
+  }
+
+  input:hover {
+    box-shadow: none;
+    transition: .5s all ease;
+  }
+  
+  .newItem > button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 34px;
+  }
+
+  .newItem > button:hover {
+    background-color: #2767bb;
+    transition: all 0.5s ease;
+  }
+  
+    select {
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-white);
+    color: var(--color-dark);
+  }
+
+  .bx-trash {
+    color: var(--color-dark);
+  }
+
+  select:hover {
+    box-shadow: none;
+    transition: .5s all ease;
+  }
+  
+  .bxs-chevron-up-circle {
+    color: #00C9A7;
+  }
+  
+  .bxs-chevron-down-circle {
+    color: #D83121;
+  }
+  
+  .columnAction {
+    width: 40px;
+    text-align: center;
+  }
+  
+  .columnAction > button {
+    background: transparent;
+    border: none;
+  }
+  
+  .columnAmount {
+    width: 30%;
+  }
+  
+  .columnType {
+    width: 80px;
+    text-align: center;
+  }
+
+  td {
+    font-size: 18px;
+  }
+
+  td i{
+    font-size: 20px;
+  }
+  
+
 /* Medias Queries telas largas*/
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1100px) {
     .container {
         width: 94%;
         grid-template-columns: 7rem auto;
@@ -456,6 +574,11 @@ main .recent-orders a{
     aside .sidebar a :last-child {
         position: relative;
     }
+
+    .newItem {
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+    }
     
     main .insights {
         grid-template-columns: 1fr;
@@ -471,23 +594,14 @@ main .recent-orders a{
     }
 
     main .recent-orders table {
-        width: 83vw;
+        width: 88vw;
     }
 
-    main table thead tr th:last-child,
-    main table thead tr th:first-child {
-        display: none;
-    }
-
-    main table tbody tr th:last-child,
-    main table tbody tr th:first-child {
-        display: none;
-    }
 }
 
 /* Media Queries telas mobile */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .container {
         width: 100%;
         grid-template-columns: 1fr;
@@ -540,9 +654,18 @@ main .recent-orders a{
     }
 
     main {
-        margin-top: 8rem;
+        margin-top: 3rem;
         margin-left: 15px;
         padding: 0 1rem;
+    }
+
+    .newItem {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sales, .expens, .income {
+        width: 95%;
     }
 
     main .recent-orders{
@@ -552,10 +675,13 @@ main .recent-orders a{
     }
 
     main .recent-orders table {
-        width: 100%;
+        width: 90vw;
         margin: 0;
     }
 
+    td {
+        font-size: 15px;
+    }
 
     .right {
         width: 94%;
@@ -597,5 +723,21 @@ main .recent-orders a{
 
     .right .top a span {
         font-size: 2rem;
+    }
+}
+
+/* Telas muitos pequenas */
+@media screen and (max-width: 400px) {
+    .sales, .expens, .income {
+        width: 90%;
+    }
+
+    .newItem {
+        gap: 5px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    main .recent-orders table {
+        width: 82vw;
     }
 }

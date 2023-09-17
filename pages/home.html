@@ -3,16 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão de Gastos Pessoais</title>
+    <title>Gestão de Gastos Pessoais | Wanderson</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Somos a prova de que estratégias centradas no cliente levam ao sucesso e reconhecimento.">
+
+    <!-- SMO -->
+    <meta property="og:title" content="Proj-dev-mobile | Wanderson">
+    <meta property="og:site_name" content="Proj-dev-mobile | Wanderson">
+    <meta property="og:description" content="As melhores condições do mercado!">
+    <meta property="og:image" content="https://wandersonsantoos.github.io/proj-sensedata/assets/img/sd-logo.svg">
+    <meta property="og:image:type" content="sd-logo.svg">
 
     <!-- Icones -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
 
     <!-- Estilos -->
     <link rel="stylesheet" href="../assets/css/home.css">
@@ -118,9 +132,6 @@
             </div>
 
             <h1>Dashboard Financeiro</h1>
-            <!-- <div class="date">
-                <input type="date" name="" id="">
-            </div> -->
 
             <div class="insights">
                 <!-- Valor 1 -->
@@ -130,38 +141,22 @@
                         </span>
                     <div class="middle">
                         <div class="left">
-                            <h3>Salário</h3>
-                            <h1>R$ 1.320,00</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>50%</p>
-                            </div>
+                            <h3>Entradas: R$</h3>
+                            <span class="incomes">0.00</span>
                         </div>
                     </div>
                     <small class="text-muted">Ultimas modificações</small>
                 </div>
 
                 <!-- Valor 2 -->
-                <div class="expenses">
+                <div class="expens">
                     <span class="material-symbols-outlined">
                         finance
                         </span>
                     <div class="middle">
                         <div class="left">
-                            <h3>Despezas Totais</h3>
-                            <h1>R$ 800,00</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>40%</p>
-                            </div>
+                            <h3>Custos: R$</h3>
+                            <span class="expenses">0.00</span>
                         </div>
                     </div>
                     <small class="text-muted">Ultimas modificações</small>
@@ -174,44 +169,52 @@
                         </span>
                     <div class="middle">
                         <div class="left">
-                            <h3>Rendimentos</h3>
-                            <h1>R$ 2.500,00</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>81%</p>
-                            </div>
+                            <h3>Totais: R$</h3>
+                            <span class="total">0.00</span>
                         </div>
                     </div>
                     <small class="text-muted">Ultimas modificações</small>
                 </div>
             </div>
 
+            <!-- dinamico -->
+            <div class="newItem">
+                <div class="divDesc">
+                    <label for="desc">Nome:</label>
+                    <input type="text" id="desc" />
+                </div>
+                <div class="divAmount">
+                    <label for="amount">Valor:</label>
+                    <input type="number" id="amount" min="0"/>
+                </div>
+                <div class="divType">
+                    <label for="type">Tipo:</label>
+                    <select id="type">
+                    <option>Entrada</option>
+                    <option>Saída</option>
+                    </select>
+                </div>
+                <button id="btnNew">Incluir</button>
+            </div>
+
             <div class="recent-orders">
                 <h2>Mudanças recentes</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nome do produto</th>
-                            <th>Número do produto</th>
-                            <th>Pagamento</th>
-                            <th>Status</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Celular</td>
-                            <td>Carro</td>
-                            <td>Casa</td>
-                            <td class="warning">Aluguel</td>
-                            <td class="primary">Reforma</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="divTable">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Descrição</th>
+                                <th class="columnAmount">Valor</th>
+                                <th class="columnType">Tipo</th>
+                                <th class="columnAction"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <a href="error.html">Mostrar mais</a>
             </div>
         </main>

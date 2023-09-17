@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function fazerLogin() {
         const usuarios = [
             {
-                login: 'Wandersonsantos.ws51@gmail.com',
+                login: 'wandersonsantos.ws51@gmail.com',
                 pass: 'devsensdata',
             },
             {

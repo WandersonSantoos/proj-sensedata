@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('Login bem sucedido!');
                 localStorage.setItem('usuarioLogado', 'true'); // Armazena um valor no localStorage
                 validarLogin = true;
-                window.location.href = 'home.html'; // Redireciona para a página home.html após o login bem-sucedido
+                window.location.href = 'pages/home.html'; // Redireciona para a página home.html após o login bem-sucedido
                 return;
             }
         }

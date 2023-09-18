@@ -1,7 +1,7 @@
 # proj-sensedata
  Teste estágio Dev-Mobile SenseData
 
-# Projeto de Gestão de Gastos Pessoais
+# Projeto de Gestão de Gastos Pessoais (Responsivo)
 
 Bem-vindo ao Projeto de Gestão de Gastos Pessoais! Este é um projeto de demonstração que inclui um aplicativo web simples para controlar suas finanças pessoais. Você pode acessá-lo [aqui](https://wandersonsantoos.github.io/proj-sensedata/).
 
